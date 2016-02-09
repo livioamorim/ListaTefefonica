@@ -1,0 +1,29 @@
+{
+  "name": "Telephone Directory Lerning-AngularJS",
+  "authors": [
+    "Lívio Amorim <livioamorim@gmail.com>"
+  ],
+  "description": "Creating Application telephone directory with Rodrigo Branas.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "AngularJS",
+    "Learning"
+  ],
+  "license": "GNU",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">1.2.0",
+    "bootstrap": ">3.0.0"
+  },
+  "devDependencies": {
+    "angular-mocks": ">1.2.0"
+  }
+}
