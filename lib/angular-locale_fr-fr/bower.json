@@ -1,0 +1,24 @@
+{
+  "name": "angular-locale_fr-fr",
+  "main": "angular-locale_fr-fr.js",
+  "version": "0.0.1",
+  "authors": [
+    "Gabriel Anglada <gabriel.anglada@testabit.com>"
+  ],
+  "description": "fr-fr locale for AngularJs",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "locale",
+    "fr"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

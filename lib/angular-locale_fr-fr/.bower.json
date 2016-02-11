@@ -1,0 +1,34 @@
+{
+  "name": "angular-locale_fr-fr",
+  "main": "angular-locale_fr-fr.js",
+  "authors": [
+    "Gabriel Anglada <gabriel.anglada@testabit.com>"
+  ],
+  "description": "fr-fr locale for AngularJs",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "locale",
+    "fr"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/gabrielAnglada/angular-locale_fr-fr",
+  "_release": "2d14e36310",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2d14e363108dd0cbc2d799ee72c141507882276e"
+  },
+  "_source": "git://github.com/gabrielAnglada/angular-locale_fr-fr.git",
+  "_target": "*",
+  "_originalSource": "angular-locale_fr-fr",
+  "_direct": true
+}
