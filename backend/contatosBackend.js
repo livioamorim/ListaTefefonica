@@ -7,7 +7,12 @@ app.use(express.bodyParser());
 var contatos = [
 	{nome: "Bruno", telefone: "9999-2222", data: new Date(), operadora: {nome: "Oi", codigo: 14, categoria: "Celular"}},
 	{nome: "Sandra", telefone: "9999-3333", data: new Date(), operadora: {nome: "Vivo", codigo: 15, categoria: "Celular"}},
-	{nome: "Mariana", telefone: "9999-9999", data: new Date(), operadora: {nome: "Tim", codigo: 41, categoria: "Celular"}}
+	{nome: "Thiago", telefone: "9999-4444", data: new Date(), operadora: {nome: "GVT", codigo: 25, categoria: "Celular"}},
+	// {nome: "Lucas", telefone: "9999-5555", data: new Date(), operadora: {nome: "Vivo", codigo: 15, categoria: "Celular"}},
+	// {nome: "Lívio", telefone: "9999-6666", data: new Date(), operadora: {nome: "Vivo", codigo: 15, categoria: "Celular"}},
+	// {nome: "Rosa", telefone: "9999-7777", data: new Date(), operadora: {nome: "Embratel", codigo: 21, categoria: "Celular"}},
+	// {nome: "Pedro", telefone: "9999-8888", data: new Date(), operadora: {nome: "Vivo", codigo: 15, categoria: "Celular"}},
+	// {nome: "Mariana", telefone: "9999-9999", data: new Date(), operadora: {nome: "Tim", codigo: 41, categoria: "Celular"}},
 ];
 var operadoras = [
 	{nome: "Oi", codigo: 14, categoria: "Celular", preco: 2},
