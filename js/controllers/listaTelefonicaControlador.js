@@ -1,4 +1,4 @@
-angular.module("listaTelefonica").controller("listaTelefonicaControlador", function ($scope, $http,$filter){
+angular.module("listaTelefonica").controller("listaTelefonicaControlador", function ($scope, $filter, contatosAPI, operadorasAPI){
 
   $scope.app = "Lista Telefonica";
 
@@ -23,7 +23,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaControlador", funct
   ];
 
   var carregarContatos = function () {
-    $http.get("http://localhost:3412/contatos").success(function(data){
+    contatosAPI.getContatos().success(function(data){
         $scope.contatos = data;
     }).error(function(data,status){
       $scope.message = "Aconteceu um problema: " + data;
@@ -31,7 +31,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaControlador", funct
   };
 
   var carregarOperadoras = function () {
-    $http.get("http://localhost:3412/operadoras").success(function(data){
+    operadorasAPI.getOperadoras().success(function(data){
         $scope.operadoras = data;
     });
   };
@@ -39,7 +39,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaControlador", funct
   $scope.adicionarContato = function (contato) {
     // $scope.contatos.push(angular.copy(contato));
     contato.data = new Date();
-    $http.post("http://localhost:3412/contatos",contato).success(function(data){
+    contatosAPI.setContatos(contato).success(function(data){
       delete $scope.contato;
       $scope.contatoForm.$setPristine();
       carregarContatos();/*VER COMO USAR RETORNO*/
