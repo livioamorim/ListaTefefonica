@@ -24,6 +24,10 @@
 
     <script src="js/value/configValue.js"></script>
 
+    <script src="js/filters/nameFilter.js"></script>
+
+
+
 
   </head>
 
@@ -48,7 +52,7 @@
         <tr ng-class="{selecionado: contato.selecionado, negrito: contato.selecionado}" ng-repeat="contato in contatos | limitTo:10 | filter:pesquisa | orderBy:criterioOrdenacao:direcaoOrdenacao">
           <td><input type="checkbox" ng-model="contato.selecionado"/></td>
           <td>{{contato.serial}}</td>
-          <td>{{contato.nome}}</td> <!-- | up percase| limitTo:3-->
+          <td>{{contato.nome | name}}</td> <!-- | up percase| limitTo:3-->
           <td>{{contato.telefone}}</td>
           <td>{{contato.operadora.nome | lowercase}}</td>
           <td>{{contato.data | date:'dd/MM/yyyy HH:mm:ss'}}</td>
