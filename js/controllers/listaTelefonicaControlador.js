@@ -8,9 +8,12 @@ angular.module("listaTelefonica").controller("listaTelefonicaControlador", funct
 
   var carregarContatos = function () {
     contatosAPI.getContatos().success(function(data){
+      // data.forEach(function (item) {
+      //   item.serial = serialGenerator.generate();
+      // });
       $scope.contatos = data;
     }).error(function(data,status){
-      $scope.message = "Aconteceu um problema: " + data;
+      $scope.error = "Não foi possível carregar os contatos!";
     });
   };
 

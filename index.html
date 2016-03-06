@@ -3,6 +3,7 @@
 
 <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="css/app.css">
+<link rel="stylesheet" type="text/css" href="css/ui.css">
 
   <head>
 
@@ -27,7 +28,7 @@
     <script src="js/filters/nameFilter.js"></script>
     <script src="js/filters/ellipsisFilter.js"></script>
 
-
+    <script src="js/directives/uiAlertDirective.js"></script>
 
 
   </head>
@@ -36,6 +37,8 @@
     <div class="jumbotron">
       <h3>{{app}}</h3>
 
+      <div ui-alert>
+      </div>
 
       <input class="form-control" type="text" ng-model="pesquisa" placeholder="Pesquisa"/>
 
