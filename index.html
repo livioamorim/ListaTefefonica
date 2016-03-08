@@ -37,8 +37,13 @@
     <div class="jumbotron">
       <h3>{{app}}</h3>
 
-      <div ui-alert>
-      </div>
+      <ui-alert title="Ops, aconteceu um problema!">
+        {{error}}
+      </ui-alert>
+      <ui-alert title="Série sobre AngularJS">
+        Episódio 10 - Criando diretivas - Parte 1.
+      </ui-alert>
+
 
       <input class="form-control" type="text" ng-model="pesquisa" placeholder="Pesquisa"/>
 
