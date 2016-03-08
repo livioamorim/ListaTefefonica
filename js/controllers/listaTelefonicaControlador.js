@@ -1,10 +1,13 @@
 angular.module("listaTelefonica").controller("listaTelefonicaControlador", function ($scope, $filter, contatosAPI, operadorasAPI, serialGenerator){
 
 // console.log(serialGenerator.generate());//Test serialGenerator
-
+  console.log($scope.$id);
   $scope.app = "Lista Telefonica";
   $scope.contatos = [];
   $scope.operadoras = [];
+  $scope.contato = {
+    data: 495169200000
+  };
 
   var carregarContatos = function () {
     contatosAPI.getContatos().success(function(data){
