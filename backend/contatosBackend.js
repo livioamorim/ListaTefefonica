@@ -5,9 +5,9 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.bodyParser());
 
 var contatos = [
-	{serial: "Y2115", nome: "BRUNO HENRIQue", telefone: "9999-2222", data: new Date(), operadora: {nome: "Oi", codigo: 14, categoria: "Celular"}},
-	{serial: "G7t8w", nome: "sandra mARIA", telefone: "9999-3333", data: new Date(), operadora: {nome: "Vivo", codigo: 15, categoria: "Celular"}},
-	{serial: "e91h9", nome: "ThIaGo AMORIM", telefone: "9999-4444", data: new Date(), operadora: {nome: "GVT", codigo: 25, categoria: "Celular"}}
+	{nome: "BRUNO HENRIQue", telefone: "9999-2222", data: new Date(), operadora: {nome: "Oi", codigo: 14, categoria: "Celular"}, serial: "Y2115"},
+	{nome: "sandra mARIA", telefone: "9999-3333", data: new Date(), operadora: {nome: "Vivo", codigo: 15, categoria: "Celular"}, serial: "G7t8w"},
+	{nome: "ThIaGo AMORIM", telefone: "9999-4444", data: new Date(), operadora: {nome: "GVT", codigo: 25, categoria: "Celular"}, serial: "e91h9"}
 ];
 var operadoras = [
 	{nome: "Oi", codigo: 14, categoria: "Celular", preco: 2},

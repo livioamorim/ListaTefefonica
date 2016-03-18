@@ -35,7 +35,7 @@
     <tr ng-class="{selecionado: contato.selecionado, negrito: contato.selecionado}" ng-repeat="contato in contatos | limitTo:10 | filter:pesquisa | orderBy:criterioOrdenacao:direcaoOrdenacao">
       <td><input type="checkbox" ng-model="contato.selecionado"/></td>
       <td>{{contato.serial}}</td>
-      <td>{{contato.nome | name | ellipsis}}</td> <!-- | up percase| limitTo:3-->
+      <td><a href="#/detalhesContato/{{contato.serial}}">{{contato.nome | name}}</a></td> <!-- | up percase| limitTo:3-->
       <td>{{contato.telefone}}</td>
       <td>{{contato.operadora.nome | lowercase}}</td>
       <td>{{contato.data | date:'dd/MM/yyyy HH:mm:ss'}}</td>
