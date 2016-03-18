@@ -22,12 +22,12 @@ angular.module("listaTelefonica").directive("uiDate",function ($filter) {
         if(value.length===10){
           var dateArray = value.split("/");
           // console.log(dateArray);
-          return new Date(dateArray[2],dateArray[1]-1,dateArray[0]).getTime();
+          return new Date(dateArray[2],dateArray[1]-1,dateArray[0]);
         }
       });
 
       ctrl.$formatters.push(function (value) {
-        return $filter("date")(value,"MM/dd/yyyy");
+        return $filter("date")(value,"dd/MM/yyyy");
       });
 
     }

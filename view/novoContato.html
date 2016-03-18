@@ -1,0 +1,39 @@
+<div class="jumbotron">
+  <button class="btn btn-primary" ng-click="adicionarContato(contato)" ng-disabled="contatoForm.$invalid">Adcionar Novo Contato</button><br/>
+<hr />
+  <form name="contatoForm">
+    <input class="form-control" type="text" ng-model="contato.nome" name="inputName" placeholder="Nome" ng-required="true" ng-minlength="5"/>
+    <input class="form-control" type="text" ng-model="contato.telefone" name="inputTelefone" placeholder="Telefone" ng-required="true" ng-pattern="/^\d{4,5}-\d{4}$/"/>
+
+    <input class="form-control" type="text" ng-model="contato.data" name="inputData" placeholder="Data" ui-date/>
+    <select class="form-control" ng-model="contato.operadora" name="inputOperadora" ng-options="operadora.nome+' ('+(operadora.preco | currency)+')' group by operadora.categoria for operadora in operadoras | orderBy:'nome'" ng-required="true">
+      <option value="">Selecione uma operadora.</option>
+    </select>
+
+  </form>
+
+  <!-- FORM ALERTS -->
+  <div ng-messages="contatoForm.inputName.$error">
+    <div ng-message="required"  class="alert alert-danger">
+      Por favor, preencha o campo Nome!
+    </div>
+    <div ng-message="minlength"  class="alert alert-danger">
+      O campo Nome deve ter no mínimo 5 caracteres.
+    </div>
+  </div>
+
+  <div ng-messages="contatoForm.inputTelefone.$error">
+    <div ng-message="required" class="alert alert-danger">
+      Por favor, preencha o campo Telefone!
+    </div>
+    <div ng-message="pattern" class="alert alert-danger">
+      Por favor, preencha o campo Telefone da seguinte forma: XXXX-XXXX.
+    </div>
+  </div>
+
+  <div ng-messages="contatoForm.inputOperadora.$error">
+    <div ng-message="required" class="alert alert-danger">
+      Por favor, preencha o campo Operadora!
+    </div>
+  </div>
+</div>

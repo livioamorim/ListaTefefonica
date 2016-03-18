@@ -1,13 +1,9 @@
 angular.module("listaTelefonica").controller("listaTelefonicaControlador", function ($scope, $filter, contatosAPI, operadorasAPI, serialGenerator){
 
-// console.log(serialGenerator.generate());//Test serialGenerator
-  console.log($scope.$id);
   $scope.app = "Lista Telefonica";
   $scope.contatos = [];
   $scope.operadoras = [];
-  $scope.contato = {
-    data: 495169200000
-  };
+
 
   var carregarContatos = function () {
     contatosAPI.getContatos().success(function(data){
@@ -28,7 +24,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaControlador", funct
 
   $scope.adicionarContato = function (contato) {
     contato.serial = serialGenerator.generate();
-    contato.data = new Date();
+    // contato.data = new Date();
     contatosAPI.setContatos(contato).success(function(data){
       delete $scope.contato;
       $scope.contatoForm.$setPristine();
