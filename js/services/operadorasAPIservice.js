@@ -3,8 +3,7 @@ angular.module("listaTelefonica").service("operadorasAPI", function($http, confi
       return $http.get(config.baseURL + "/operadoras");
   };
 
-  // this.setOperadoras = function(operadora){
-  //     return $http.post("http://localhost:3412/operadoras", operadora);
-  // };
-
+  this.getOperadora = function(nome){
+      return $http.get(config.baseURL + "/operadoras/" + nome );
+  };
 });

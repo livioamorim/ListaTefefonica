@@ -1,4 +1,5 @@
 angular.module("listaTelefonica").config(function ($routeProvider) {
+
   $routeProvider.when("/contatos",{
     templateUrl: "view/contatos.html",
     controller: "listaTelefonicaControlador",
@@ -26,8 +27,18 @@ angular.module("listaTelefonica").config(function ($routeProvider) {
     templateUrl: "view/detalhesContato.html",
     controller: "detalhesContatoControlador",
     resolve: {
-      contatos: function (contatosAPI) {
-        return contatosAPI.getContatos();
+      contato: function (contatosAPI, $route) {
+        return contatosAPI.getContato($route.current.params.serial);
+      }
+    }
+  });
+
+  $routeProvider.when("/detalhesOperadora/:nome",{
+    templateUrl: "view/detalhesOperadora.html",
+    controller: "detalhesOperadoraControlador",
+    resolve: {
+      operadora: function (operadorasAPI, $route) {
+        return operadorasAPI.getOperadora($route.current.params.nome);
       }
     }
   });

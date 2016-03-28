@@ -1,1 +1,31 @@
-{{contato}}
+<div class="jumbotron">
+  <h3>Contato</h3>
+  <table class="table">
+    <tr>
+      <td>Serial</td>
+      <td>{{contato.serial}}</td>
+    </tr>
+    <tr>
+      <td>Nome</td>
+      <td>{{contato.nome | name}}</td>
+    </tr>
+    <tr>
+      <td>Telefone</td>
+      <td>{{contato.telefone}}</td>
+    </tr>
+    <tr>
+      <td>Operadora</td>
+      <td><a href="#/detalhesOperadora/{{contato.operadora.nome}}">{{contato.operadora.nome}}</a></td>
+    </tr>
+    <tr>
+      <td>Data</td>
+      <td>{{contato.data | date:'dd/MM/yyyy'}}</td>
+    </tr>
+  </table>
+
+  <!-- <button onclick="history.back()">Back</button>
+  <a class="btn btn-primary" href="#/contatos">Voltar</a> -->
+
+  <a class="btn btn-primary" onclick="history.back()">Back</a>
+
+</div>

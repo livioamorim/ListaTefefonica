@@ -37,11 +37,11 @@
       <td>{{contato.serial}}</td>
       <td><a href="#/detalhesContato/{{contato.serial}}">{{contato.nome | name}}</a></td> <!-- | up percase| limitTo:3-->
       <td>{{contato.telefone}}</td>
-      <td>{{contato.operadora.nome | lowercase}}</td>
+      <td><a href="#/detalhesOperadora/{{contato.operadora.nome}}">{{contato.operadora.nome | lowercase}}</a></td>
       <td>{{contato.data | date:'dd/MM/yyyy HH:mm:ss'}}</td>
     </tr>
   </table>
   <button class="btn btn-danger" ng-click="apagarContato(contatos)" ng-show="isContatoSelecionado(contatos)">Remover Contato</button>
   <hr/>
-  <a class="btn btn-primary btn-block" href="#/novoContato">Novo Contato</a>
+  <a class="btn btn-primary" href="#/novoContato">Novo Contato</a>
 </div>
