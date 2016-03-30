@@ -11,7 +11,7 @@ angular.module("listaTelefonica").directive("uiAccordions", function () {
         accordions.forEach(function (accordion) {
           accordion.isOpened = false;
         });
-      }
+      };
     }
   };
 });
