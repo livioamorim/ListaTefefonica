@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/rodrigobranas/youtube/issues"
   },
-  "homepage": "https://github.com/rodrigobranas/youtube"
+  "homepage": "https://github.com/rodrigobranas/youtube",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }
